@@ -11,6 +11,13 @@
       array = $scope.lunchList.split(',');
 
       for (var i = 0; i < array.length; i++) {
+
+        if((array[0] == null) || (array[0] == " ") || (array[0] == ""))
+        {
+            $scope.error = "Please enter data first";
+            return;
+        }
+
         if((array[i] == null) || (array[i] == " ") || (array[i] == ""))
         {
             $scope.error = "An entry is empty";
